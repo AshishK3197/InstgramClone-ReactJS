@@ -3,11 +3,22 @@ import React, { useState } from "react";
 import { db, storage } from "../firebase";
 import firebase from "firebase";
 import "./ImageUpload.css";
+import LinearProgressWithLabel from "./Progressbar";
+import { makeStyles } from "@material-ui/core/styles";
 
 function ImageUpload({ username }) {
 	const [caption, setCaption] = useState("");
 	const [image, setImage] = useState(null);
 	const [progress, setProgress] = useState("");
+
+	// Progress bar Functions
+	const useStyles = makeStyles({
+		root: {
+			width: "100%",
+		},
+	});
+
+	const classes = useStyles();
 
 	const handleChange = (e) => {
 		if (e.target.files[0]) {
@@ -57,8 +68,10 @@ function ImageUpload({ username }) {
 
 	return (
 		<div className="imageupload">
-			<h1>ImageUpload</h1>
-			<progress value={progress} max="100" className="imageupload__progress" />
+			{/* <progress value={progress} max="100" className="imageupload__progress" /> */}
+			<div className={classes.root}>
+				<LinearProgressWithLabel value={progress} />
+			</div>
 			<input
 				type="text"
 				placeholder="Enter a caption"
