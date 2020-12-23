@@ -70,7 +70,7 @@ function Post({ postId, imageUrl, user, username, caption }) {
 				<form className="post__commentBox">
 					<input
 						type="text"
-						placeholder="Add a Comment"
+						placeholder="Add a Comment..."
 						className="post__input"
 						value={comment}
 						onChange={(e) => setComment(e.target.value)}
@@ -78,7 +78,9 @@ function Post({ postId, imageUrl, user, username, caption }) {
 					<button
 						disabled={!comment}
 						type="submit"
-						className="post__button"
+						className={
+							!comment ? "post__buttondisabled" : "post__buttonenabled" //to apply color to post button text depending upon the comment in the text box.
+						}
 						onClick={postComment}
 					>
 						Post

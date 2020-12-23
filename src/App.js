@@ -248,9 +248,8 @@ function App() {
 			{/* Upload Button, choose file and add caption */}
 			{user?.displayName ? (
 				<ImageUpload username={user.displayName} />
-			) : (
-				<h3>Sorry you need to login to upload 😄</h3>
-			)}
+			) : // <h3>Sorry you need to login to upload 😄</h3>
+			null}
 		</div>
 	);
 }

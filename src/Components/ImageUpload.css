@@ -9,8 +9,21 @@
 	/* position: fixed; */
 	background-color: white;
 	border-top: 1px solid lightgrey;
+	padding: 20px;
 }
 
 .imageupload__progress {
 	width: 100%;
+	padding-bottom: 5px;
+	margin: 10px 5px;
+}
+
+.imageupload__input {
+	padding: 5px;
+	margin: 5px 5px;
+}
+
+.imageupload__choosefile {
+	text-align: center;
+	padding: 10px;
 }

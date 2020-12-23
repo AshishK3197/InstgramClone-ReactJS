@@ -3,6 +3,7 @@
 	background-color: white;
 	border: 1px solid lightgrey;
 	margin-bottom: 45px;
+	border-radius: 5px;
 }
 
 .post__header {
@@ -23,7 +24,7 @@
 
 .post__text {
 	font-weight: normal;
-	padding: 20px;
+	padding: 10px 20px;
 }
 
 .post__username {
@@ -33,21 +34,36 @@
 .post__commentBox {
 	display: flex;
 	margin-top: 10px;
+	padding: 3px;
 }
 .post__input {
 	flex: 1;
 	border: none;
 	padding: 10px;
+	font-weight: normal;
+	font-size: medium;
 	border-top: 1px solid lightgrey;
 }
-.post__button {
+.post__buttondisabled {
 	flex: 0;
 	border: none;
-	color: #6082a3;
+	font-weight: bold;
+	font-size: medium;
+	/* color: #1c088d; */
+	background-color: transparent;
+	border-top: 1px solid lightgrey;
+}
+
+.post__buttonenabled {
+	flex: 0;
+	border: none;
+	font-weight: bold;
+	font-size: medium;
+	color: #0095f6;
 	background-color: transparent;
 	border-top: 1px solid lightgrey;
 }
 
 .post__comments {
-	padding: 20px;
+	padding: 10px 20px;
 }

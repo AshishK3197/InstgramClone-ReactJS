@@ -70,17 +70,33 @@ function ImageUpload({ username }) {
 		<div className="imageupload">
 			{/* <progress value={progress} max="100" className="imageupload__progress" /> */}
 			<div className={classes.root}>
-				<LinearProgressWithLabel value={progress} />
+				<LinearProgressWithLabel
+					value={progress}
+					className="imageupload__progress"
+				/>
 			</div>
+			<div className="imageupload__choosefile">
+				<input type="file" onChange={handleChange} />
+			</div>
+
 			<input
 				type="text"
 				placeholder="Enter a caption"
+				className="imageupload__input"
 				value={caption}
 				onChange={(event) => setCaption(event.target.value)}
 			/>
-			<input type="file" onChange={handleChange} />
+
 			{/* when we click on the choose file button, it triggers a popup to select the file, and when we click on the file and open, it triggers handleChange*/}
-			<Button onClick={handleUpload}>Upload</Button>
+			{/* <Button onClick={handleUpload}>POST</Button> */}
+			<Button
+				variant="contained"
+				color="default"
+				disableElevation
+				onClick={handleUpload}
+			>
+				POST
+			</Button>
 		</div>
 	);
 }
