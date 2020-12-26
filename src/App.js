@@ -47,7 +47,7 @@ function App() {
 		const unsubscribe = auth.onAuthStateChanged((authUser) => {
 			if (authUser) {
 				//user logged in
-				console.log(authUser);
+				// console.log(authUser);
 				setUser(authUser); //survives refresh of webpage by cookie tracking , as user will still be logged in if the page gets reloaded
 			} else {
 				//	user logged out
@@ -231,7 +231,8 @@ function App() {
 				</div>
 				<div className="app__postsright">
 					<InstagramEmbed
-						url="https://www.instagram.com/p/B_uf9dmAGPw/"
+						url="https://www.instagram.com/p/B-KBluwlJZYEwIgjOf56B7Y9DtXNoBzsVi54Ts0/"
+						clientAccessToken="454821378986240|6a38442e302f650f9536d6cd88e3b1a4"
 						maxWidth={320}
 						hideCaption={false}
 						containerTagName="div"
